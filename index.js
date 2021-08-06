@@ -118,13 +118,12 @@ renderBreweriesList();
 // second is type of brewery list
 // third is cities list
 
-const mainEl = document.queryselector(main)
+const mainEl = document.querySelector("main")
 
 const filterSectionEl = document.querySelector("filters-section")
 
 const listOfBreweriesSectionEl = document.querySelector("main")
 
-mainEl.append(mainEl)
 
 function renderFilterSection(filterSection) {
   console.log("Inside filterSection: ", filterSection)
@@ -143,10 +142,6 @@ function renderFilterSection(filterSection) {
 
   const filterSectionLabelEl = document.createElement("label")
   filterSectionLabelEl.setAttribute = ("filter-by-type")
-
-  const filterSectionSelectEl = document.createElement("select")
-  filterSectionSelectEl.name = ("filter-by-type")
-  filterSectionSelectEl.id = ("filter-by-type")
 
   const filterSectionSecondHeader = document.createElement("h3")
   filterSectionSecondHeader.innerHTML = "Type of Brewery"
@@ -209,6 +204,9 @@ function renderFilterSection(filterSection) {
   filterSectionCityFormLabel2El.setAttribute = "cincinnati"
   filterSectionCityFormLabel2El.innerHTML = "cincinnati"
 
+
+  mainEl.append(aside)
+  
   filterSectionEl.append(filterSectionEl)
 
   filterSectionEl.append(filterSectionHeaderEl)
@@ -266,8 +264,8 @@ function renderListOfBreweriesSection(breweriesSection) {
   const listOfBreweriesSectionLabelEl = document.createElement("label")
   listOfBreweriesSectionLabelEl.setAttribute = ("search-breweries")
 
-  const listOfBreweriesSectionHeaderEl = document.createElement("h2")
-  listOfBreweriesSectionHeaderEl.innerHTML = "Search breweries: "
+  const listOfBreweriesSectionHeader2El = document.createElement("h2")
+  listOfBreweriesSectionHeader2El.innerHTML = "Search breweries: "
 
   const listOfBreweriesSectionInputEl = document.createElement("input")
   listOfBreweriesSectionInputEl.id = "search-breweries"
@@ -329,7 +327,7 @@ const listOfBreweriesSectionDivEl = document.createElement("div")
 
   listOfBreweriesSectionFormEl.append(listOfBreweriesSectionLabelEl)
 
-  listOfBreweriesSectionLabelEl.append(listOfBreweriesSectionHeaderEl)
+  listOfBreweriesSectionLabelEl.append(listOfBreweriesSectionHeader2El)
 
   listOfBreweriesSectionFormEl.append(listOfBreweriesSectionInputEl)
 
