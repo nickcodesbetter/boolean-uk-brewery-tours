@@ -12,39 +12,10 @@ let state = {
 // ran-through with Bruce
 // create variable which links to the 
 
-// THIS IS BRUCE's CODE - We went over it a few times together each explaining what was happening, Bruce said my explanation was correct, I will write my own version
-const selectStateForm = document.querySelector("#select-state-form");
-console.log(selectStateForm);
-
-function listenToSelectStateForm () {
-    selectStateForm.addEventListener("submit", (event) => {
-      event.preventDefault()
-      const input = selectStateForm.querySelector("#select-state");
-      console.log(input.value)
-    
-    fetch(`https://api.openbrewerydb.org/breweries?by_state=${input.value}`)
-    .then((response) => response.json())
-    .then((input) => {
-      console.log("Inside get Fetch: ", input);
- 
-  });
-      
-    })
-}
-
-listenToSelectStateForm();
-
-// THIS IS BRUCE'S CODE
 
 
 
-function renderBreweriesList() {
-  console.log("Inside renderBreweriesList: ", state.breweries);
 
-  for (let i = 0; i < state.breweries.length; i++) {}
-}
-
-renderBreweriesList();
 
 // Description
 // In this exercise we explore a common scenario in eCommerce and booking sites, using filters and search to modify what we render from the state.
@@ -206,7 +177,7 @@ function renderFilterSection(filterSection) {
 
 
   mainEl.append(aside)
-  
+
   filterSectionEl.append(filterSectionEl)
 
   filterSectionEl.append(filterSectionHeaderEl)
@@ -360,3 +331,95 @@ const listOfBreweriesSectionDivEl = document.createElement("div")
 
 }
 
+
+
+
+// The FIRST (CITIES) SEARCH BAR 
+
+// THIS IS BRUCE's CODE - We went over it a few times together each explaining what was happening, Bruce said my explanation was correct, I will write my own version
+const selectStateForm = document.querySelector("#select-state-form");
+console.log(selectStateForm);
+
+function listenToSelectStateForm () {
+    selectStateForm.addEventListener("submit", (event) => {
+      event.preventDefault()
+      const input = selectStateForm.querySelector("#select-state");
+      console.log(input.value)
+    
+    fetch(`https://api.openbrewerydb.org/breweries?by_state=${input.value}`)
+    .then((response) => response.json())
+    .then((input) => {
+      console.log("Inside get Fetch (state search bar): ", input);
+ 
+  });
+      
+    })
+}
+
+listenToSelectStateForm();
+
+// THIS IS BRUCE'S CODE
+
+
+
+
+
+
+// The SECOND (BREWERIES) SEARCH BAR Here I plan to do the same - use the fetch api but this time for the breweries
+
+// THIS IS BRUCE's CODE - We went over it a few times together each explaining what was happening, Bruce said my explanation was correct, I will write my own version
+
+// function listenToSelectStateForm () {
+//     selectStateForm.addEventListener("submit", (event) => {
+//       event.preventDefault()
+//       const input = selectStateForm.querySelector("#select-state");
+//       console.log(input.value)
+    
+//     fetch(`https://api.openbrewerydb.org/breweries?by_name=${input.value}`)
+//     .then((response) => response.json())
+//     .then((input) => {
+//       console.log("Inside get Fetch (state search bar): ", input);
+ 
+//   });
+      
+//     })
+// }
+
+listenToSelectStateForm();
+
+// THIS IS BRUCE'S CODE
+
+
+
+
+// FILTER SECTION - TYPE OF BREWERIES - DROPDOWN MENU
+
+function renderFiltersType() {
+  console.log("Inside renderFilters: ", state.breweries);
+
+  for (let i = 0; i < state.breweries; i++) {
+
+    // write code for dropdown menu
+    // Similar to Lana's below
+    
+  }
+}
+
+
+
+// FILTER SECTION - CITIES - CHECKBOX
+
+function renderFiltersCities() {
+  console.log("Inside renderFilters: ", state.cities);
+
+  for (let i = 0; i < state.cities; i++) {
+
+    // I saw Lana's post on the support channel, so I'll be doing something like that
+
+
+
+  }
+}
+
+
+// I will put some kind of delete/reset function here for the "clear all"
