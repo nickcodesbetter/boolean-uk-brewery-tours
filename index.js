@@ -12,7 +12,7 @@ let state = {
 // ran-through with Bruce
 // create variable which links to the 
 
-// THIS IS BRUCE's CODE - We went over it a few times together each explaining what was happening, Bruce said my explanation was correct, I will write my own
+// THIS IS BRUCE's CODE - We went over it a few times together each explaining what was happening, Bruce said my explanation was correct, I will write my own version
 const selectStateForm = document.querySelector("#select-state-form");
 console.log(selectStateForm);
 
@@ -144,31 +144,35 @@ function renderFilterSection(filterSection) {
   const filterSectionLabelEl = document.createElement("label")
   filterSectionLabelEl.setAttribute = ("filter-by-type")
 
+  const filterSectionSelectEl = document.createElement("select")
+  filterSectionSelectEl.name = ("filter-by-type")
+  filterSectionSelectEl.id = ("filter-by-type")
+
   const filterSectionSecondHeader = document.createElement("h3")
   filterSectionSecondHeader.innerHTML = "Type of Brewery"
 
   const filterSectionSelectEl = document.createElement("select")
   filterSectionSelectEl.name = "filter-by-type"
-  filterSectionSelectEl.idName = "filter-by-type"
+  filterSectionSelectEl.id = "filter-by-type"
   
-  const filterSectionOptionEl = document.createElement("option")
-  filterSectionOptionEl.value = ""
+  const filterSectionOption1El = document.createElement("option")
+  filterSectionOption1El.value = ""
     filterSectionSecondHeader.innerHTML = "Select a type..."
 
 
-  const filterSectionOptionEl = document.createElement("option")
-  filterSectionOptionEl.value = "micro"
+  const filterSectionOption2El = document.createElement("option")
+  filterSectionOption2El.value = "micro"
     filterSectionSecondHeader.innerHTML = "Micro"
 
 
-  const filterSectionOptionEl = document.createElement("option")
-  filterSectionOptionEl.value = "regional"
+  const filterSectionOption3El = document.createElement("option")
+  filterSectionOption3El.value = "regional"
     filterSectionSecondHeader.innerHTML = "Regional"
 
 
-  const filterSectionOptionEl = document.createElement("option")
-  filterSectionOptionEl.value = "brewpub"
-  filterSectionOptionEl.innerHTML = "Brewpub"
+  const filterSectionOption4El = document.createElement("option")
+  filterSectionOption4El.value = "brewpub"
+  filterSectionOption4El.innerHTML = "Brewpub"
 
   
   const filterSectionDivEl = document.createElement("div")
@@ -176,44 +180,84 @@ function renderFilterSection(filterSection) {
   
   
   const filterSectionThirdHeaderEl = document.createElement("h3")
-
+  filterSectionThirdHeaderEl.innerHTML = "Cities"
   
   const filterSectionButtonEl = document.createElement("button")
   filterSectionButtonEl.class = "clear-all-btn"
-  filterSectionButtonEl.innerHTML = "Regional"
+  filterSectionButtonEl.innerHTML = "clear all"
 
   
   const filterSectionCityFormEl = document.createElement("form")
   filterSectionCityFormEl.idName = "filter-by-city-form"
 
   
-  const filterSectionCityFormInputEl = document.createElement("input")
-  filterSectionCityFormEl.type = "checkbox"
-  filterSectionCityFormEl.name = "chardon"
-  filterSectionCityFormEl.value = "cincinnati"
+  const filterSectionCityFormInput1El = document.createElement("input")
+  filterSectionCityFormInput1El.type = "checkbox"
+  filterSectionCityFormInput1El.name = "chardon"
+  filterSectionCityFormInput1El.value = "chardon"
 
-  const filterSectionCityFormLabelEl = document.createElement("label")
-  filterSectionCityFormLabelEl.for = "chardon"
-  filterSectionCityFormLabelEl.innterText = "Chardon"
+  const filterSectionCityFormLabel1El = document.createElement("label")
+  filterSectionCityFormLabel1El.setAttribute = "chardon"
+  filterSectionCityFormLabel1El.innerHTML = "Chardon"
 
-  
+  const filterSectionCityFormInput2El = document.createElement("input")
+  filterSectionCityFormInput2El.type = "checkbox"
+  filterSectionCityFormInput2El.name = "cincinnati"
+  filterSectionCityFormInput2El.value = "cincinnati"
 
-  filterSectionEl.append(filtersection)
+  const filterSectionCityFormLabel2El = document.createElement("label")
+  filterSectionCityFormLabel2El.setAttribute = "cincinnati"
+  filterSectionCityFormLabel2El.innerHTML = "cincinnati"
 
+  filterSectionEl.append(filterSectionEl)
+
+  filterSectionEl.append(filterSectionHeaderEl)
+
+  filterSectionEl.append(filterSectionFormEl)
+
+  filterSectionFormEl.append(filterSectionLabelEl)
+
+  filterSectionFormEl.append(filterSectionSelectEl)
+
+  filterSectionSelectEl.append(filterSectionOption1El)
+
+  filterSectionSelectEl.append(filterSectionOption2El)
+
+  filterSectionSelectEl.append(filterSectionOption3El)
+
+  filterSectionFormEl.append(filterSectionOption4El)
+
+  filterSectionEl.append(filterSectionDivEl)
+
+  filterSectionDivEl.append(filterSectionThirdHeaderEl)
+
+  filterSectionDivEl.append(filterSectionButtonEl)
+
+  filterSectionEl.append(filterSectionCityFormEl)
+
+  filterSectionCityFormEl.append(filterSectionCityFormInput1El)
+
+  filterSectionCityFormInput1El.append(filterSectionCityFormLabel1El)
+
+  filterSectionCityFormEl.append(filterSectionCityFormInput2El)
+
+  filterSectionCityFormInput2El.append(filterSectionCityFormLabel2El)
 
 }
-
 
 
 function renderListOfBreweriesSection(breweriesSection) {
   console.log("Inside breweries section: ", breweriesSection)
 
-  listOfBreweriesSection.innerHTML = ""
+  listOfBreweriesSectionEl.innerHTML = ""
 
   const listOfBreweriesSectionEl = document.createElement("main");
   
-  const listOfBreweriesSectionHeaderEl = document.createElement("h1")
-  listOfBreweriesSection.innerHTML = "List of Breweries"
+  const listOfBreweriesSectionFirstHeaderEl = document.createElement("h1")
+  listOfBreweriesSectionFirstHeaderEl.innerHTML = "List of Breweries"
+
+  const listOfBreweriesSectionHeaderEl = document.createElement("header")
+  listOfBreweriesSection.className = "search-bar"
 
   const listOfBreweriesSectionFormEl = document.createElement("form")
   listOfBreweriesSectionFormEl.id = "search-breweries-form"
@@ -315,9 +359,6 @@ const listOfBreweriesSectionDivEl = document.createElement("div")
 
   listOfBreweriesSectionLinkSectionEl.append(listOfBreweriesSectionLinkSectionLinkEl)
 
-
-
-  filterSectionEl.append(filtersection)
 
 }
 
