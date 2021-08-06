@@ -283,7 +283,38 @@ const listOfBreweriesSectionDivEl = document.createElement("div")
 
   listOfBreweriesSectionFirstHeaderEl.append(listOfBreweriesSectionFormEl)
 
-  listOfBreweriesSectionFormEl
+  listOfBreweriesSectionFormEl.append(listOfBreweriesSectionLabelEl)
+
+  listOfBreweriesSectionLabelEl.append(listOfBreweriesSectionHeaderEl)
+
+  listOfBreweriesSectionFormEl.append(listOfBreweriesSectionInputEl)
+
+  listOfBreweriesSectionEl.append(listOfBreweriesSectionArticleEl)
+
+  listOfBreweriesSectionArticleEl.append(listOfBreweriesSectionUlEl)
+
+  listOfBreweriesSectionUlEl.append(listOfBreweriesSectionLiEl)
+
+  listOfBreweriesSectionLiEl.append(listOfBreweriesSectionLiHeaderEl)
+
+  listOfBreweriesSectionLiEl.append(listOfBreweriesAddressSectionEl)
+
+  listOfBreweriesSectionLiEl.append(listOfBreweriesSectionDivEl)
+
+  listOfBreweriesSectionLiEl.append(listOfBreweriesSectionSectionEl)
+
+  listOfBreweriesSectionSectionEl.append(listOfBreweriesSectionSectionHeaderEl)
+
+  listOfBreweriesSectionSectionEl.append(listOfBreweriesSectionParagraphEl)
+
+  listOfBreweriesSectionSectionEl.append(listOfBreweriesSectionBoldParagraphEl)
+
+  listOfBreweriesSectionPhoneSectionEl.append(listOfBreweriesSectionPhoneSectionHeaderEl)
+
+  listOfBreweriesSectionPhoneSectionEl.append(listOfBreweriesSectionPhoneSectionParagraphEl)
+
+  listOfBreweriesSectionLinkSectionEl.append(listOfBreweriesSectionLinkSectionLinkEl)
+
 
 
   filterSectionEl.append(filtersection)
