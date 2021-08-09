@@ -1,35 +1,3 @@
-// This version is going to start off as just pseudocode and logic, so I get the essentials done - I have mapped it out on a piece of paper, so I have a good understanding of the inputs and outputs, I will leave the layout til later
-
-// FilterSection - most important
-
-// when the state is submitted in the search bar e.g. "ohio", there will be three fetch requests.
-// 1- list of breweries
-// 2 - type of breweries
-// 3 - list of cities
-// type of breweries and list of cities are of course for the filters seciton.
-// Firstly, the type of breweries 
-// The user will need to choose which type they are looking for
-// Input: The event Listener(EL) needs to be "change"
-// Output: The EL will have to have contained within it, a filter that filters the fetched USstate data held in the state/the brewerieslist to only include whatever the selected type is - the dot notation is state.type
-// Output: The other thing that has to be contained within the EL is a filter that filters the fetched UScities data held in the cities section of the filter section, to only include that particular type.
-// The next thing that is needed in the filter section is the ability of the user to selct which cities to filter the displayed list of Breweries
-// The same thing applies here
-// Input: The EL will need to be "click", so that when the when the user ticks any number of checkboxes, these cities are the cities by which the list of Breweries are filtered.
-// Output: The El will have to have contained within it, a filter that filters the fetched USstate date held in the state/the brewerieslist to only include whatever the selected cities are - the dot notation is state.filters.city
-// Clear all
-// THe user needs the option to clear the checkboxes
-// Input: The El needs to be click
-// Output: Within the EL, there needs to be the filter 
-// Output: The city filter needs to be reset using, which would be the reset element as a bridged variable with the extension of .reset
-//
-
-
-
-
-
-
-
-
 let state = {
   selectStateInput: "",
   breweries: [],
